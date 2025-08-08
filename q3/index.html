@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Question03</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#b3a3ff', /* exact color from your form header */
+            primaryDark: '#9400D3' /* slightly darker for hover */
+          },
+          borderRadius: {
+            'xl2': '14px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .input-icon {
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-primary min-h-screen flex items-center justify-center p-6">
+
+  <main class="w-full max-w-3xl">
+    <div class="bg-white rounded-xl2 shadow-lg border border-primary/20 overflow-hidden">
+      <!-- Header -->
+      <div class="bg-white px-8 py-6">
+        <h1 class="text-2xl sm:text-3xl font-semibold text-blue-500">Restaurant Reservation Form</h1>
+      </div>
+
+      <!-- Form -->
+      <div class="p-8 sm:p-10">
+        <form class="space-y-4" action="#" novalidate>
+          <!-- Name row -->
+           <p class="text-blue-500 font-semibold">Name</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="First"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" placeholder="Last"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+
+          <!-- Email & Phone -->
+           <p class="text-blue-500 font-semibold">Email & Phone</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="email" placeholder="Email"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+              <input type="tel" placeholder="Phone Number"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary " />
+          </div>
+
+          <!-- Date & Time -->
+           <p class="text-blue-500 font-semibold ">Reservation Date and time</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="MM/DD/YYYY"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+            <input type="text" placeholder="HH:MM AM"
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+
+          <!-- Persons -->
+           <p class="text-blue-500 font-semibold">How many persons will you be with?</p>
+          <input type="number" placeholder="How many person will you be with?"
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+
+          <!-- Notes -->
+           <p class="text-blue-500 font-semibold">Notes</p>
+          <textarea rows="4" placeholder="Notes"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+
+          <!-- Button -->
+          <button type="submit"
+            class="w-full bg-violet-500 hover:bg-primaryDark text-white font-bold rounded-lg px-4 py-3 shadow-md focus:outline-none focus:ring-2 focus:ring-primary/50 transition">
+            SEND
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
